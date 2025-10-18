@@ -1,0 +1,254 @@
+/**
+ * iOS 风格通用样式
+ */
+@import './variables.scss';
+
+/* ========== 页面基础样式 ========== */
+page {
+  background-color: $bg-secondary;
+  font-family: $font-family;
+  font-size: $font-size-md;
+  color: $text-primary;
+  line-height: $line-height-normal;
+}
+
+/* ========== iOS 风格卡片 ========== */
+.ios-card {
+  background-color: $bg-primary;
+  border-radius: $card-radius;
+  box-shadow: $card-shadow;
+  padding: $spacing-md;
+  margin: $spacing-sm 0;
+}
+
+/* ========== iOS 风格按钮 ========== */
+.ios-button {
+  height: $button-height-md;
+  line-height: $button-height-md;
+  border-radius: $button-radius;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  transition: all $transition-normal $ease-out;
+
+  &--primary {
+    background-color: $primary;
+    color: #fff;
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &--secondary {
+    background-color: $bg-secondary;
+    color: $text-primary;
+
+    &:active {
+      background-color: darken($bg-secondary, 5%);
+    }
+  }
+
+  &--plain {
+    background-color: transparent;
+    border: 2rpx solid $border-color;
+    color: $text-primary;
+
+    &:active {
+      background-color: $bg-tertiary;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+/* ========== iOS 风格输入框 ========== */
+.ios-input {
+  height: $input-height;
+  background-color: $bg-secondary;
+  border-radius: $radius-sm;
+  padding: 0 $spacing-md;
+  font-size: $font-size-md;
+  color: $text-primary;
+  border: none;
+  transition: all $transition-normal $ease-out;
+
+  &::placeholder {
+    color: $text-tertiary;
+  }
+
+  &:focus {
+    background-color: darken($bg-secondary, 2%);
+  }
+}
+
+/* ========== 文字样式 ========== */
+.text-primary {
+  color: $text-primary;
+}
+
+.text-secondary {
+  color: $text-secondary;
+}
+
+.text-tertiary {
+  color: $text-tertiary;
+}
+
+.text-link {
+  color: $text-link;
+}
+
+/* ========== 字体大小 ========== */
+.text-xs {
+  font-size: $font-size-xs;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.text-md {
+  font-size: $font-size-md;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+.text-xl {
+  font-size: $font-size-xl;
+}
+
+.text-xxl {
+  font-size: $font-size-xxl;
+}
+
+/* ========== 字体粗细 ========== */
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-normal {
+  font-weight: $font-weight-normal;
+}
+
+.font-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+/* ========== 间距工具类 ========== */
+.mt-xs {
+  margin-top: $spacing-xs;
+}
+
+.mt-sm {
+  margin-top: $spacing-sm;
+}
+
+.mt-md {
+  margin-top: $spacing-md;
+}
+
+.mt-lg {
+  margin-top: $spacing-lg;
+}
+
+.mb-xs {
+  margin-bottom: $spacing-xs;
+}
+
+.mb-sm {
+  margin-bottom: $spacing-sm;
+}
+
+.mb-md {
+  margin-bottom: $spacing-md;
+}
+
+.mb-lg {
+  margin-bottom: $spacing-lg;
+}
+
+/* ========== Flex 布局 ========== */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== 页面容器 ========== */
+.page-container {
+  min-height: 100vh;
+  padding: $page-padding;
+  box-sizing: border-box;
+}
+
+/* ========== 分隔线 ========== */
+.divider {
+  height: 2rpx;
+  background-color: $border-color;
+  margin: $spacing-md 0;
+}
+
+/* ========== 空状态 ========== */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xxl 0;
+  color: $text-tertiary;
+
+  &__icon {
+    font-size: 120rpx;
+    margin-bottom: $spacing-md;
+  }
+
+  &__text {
+    font-size: $font-size-md;
+  }
+}
+
+/* ========== 加载状态 ========== */
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-lg;
+}
+
+/* ========== iOS 原生感触控反馈 ========== */
+.touchable {
+  transition: opacity $transition-fast $ease-out;
+
+  &:active {
+    opacity: 0.6;
+  }
+}

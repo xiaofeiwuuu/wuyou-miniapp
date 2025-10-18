@@ -1,0 +1,120 @@
+/**
+ * iOS 设计风格变量
+ * 参考 Apple Human Interface Guidelines
+ */
+
+/* ========== 颜色系统 ========== */
+
+// 主色调 - iOS 蓝
+$primary: #007AFF;
+$primary-light: #5AC8FA;
+$primary-dark: #0051D5;
+
+// 背景色
+$bg-primary: #FFFFFF; // 纯白
+$bg-secondary: #F2F2F7; // 浅灰背景
+$bg-tertiary: #FAFAFA; // 极浅灰
+
+// 文字颜色
+$text-primary: #000000; // 主文字
+$text-secondary: #8E8E93; // 次要文字
+$text-tertiary: #C7C7CC; // 辅助文字
+$text-link: #007AFF; // 链接文字
+
+// 边框颜色
+$border-color: #E5E5EA;
+$border-light: #F0F0F5;
+
+// 成功/警告/错误色
+$success: #34C759; // iOS 绿
+$warning: #FF9500; // iOS 橙
+$error: #FF3B30; // iOS 红
+$info: #5AC8FA; // iOS 浅蓝
+
+/* ========== 间距系统 ========== */
+$spacing-xs: 8rpx;
+$spacing-sm: 16rpx;
+$spacing-md: 24rpx;
+$spacing-lg: 32rpx;
+$spacing-xl: 48rpx;
+$spacing-xxl: 64rpx;
+
+// 页面边距
+$page-padding: 32rpx;
+
+/* ========== 圆角系统 ========== */
+$radius-xs: 8rpx;
+$radius-sm: 12rpx;
+$radius-md: 16rpx;
+$radius-lg: 20rpx;
+$radius-xl: 24rpx;
+$radius-round: 999rpx;
+
+// 卡片圆角
+$card-radius: $radius-md;
+// 按钮圆角
+$button-radius: $radius-sm;
+
+/* ========== 阴影系统 ========== */
+$shadow-sm: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+$shadow-md: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8rpx 24rpx rgba(0, 0, 0, 0.12);
+
+// 卡片阴影
+$card-shadow: $shadow-md;
+
+/* ========== 字体系统 ========== */
+// 字号
+$font-size-xs: 24rpx;
+$font-size-sm: 26rpx;
+$font-size-md: 28rpx;
+$font-size-lg: 32rpx;
+$font-size-xl: 36rpx;
+$font-size-xxl: 40rpx;
+
+// 字重
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// iOS 系统字体
+$font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif;
+
+/* ========== 行高 ========== */
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+/* ========== 过渡动画 ========== */
+$transition-fast: 0.15s;
+$transition-normal: 0.25s;
+$transition-slow: 0.35s;
+
+// iOS 缓动函数
+$ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+/* ========== Z-index 层级 ========== */
+$z-index-base: 1;
+$z-index-dropdown: 1000;
+$z-index-modal: 2000;
+$z-index-popup: 3000;
+$z-index-toast: 4000;
+
+/* ========== 组件尺寸 ========== */
+// 按钮高度
+$button-height-sm: 64rpx;
+$button-height-md: 88rpx;
+$button-height-lg: 96rpx;
+
+// 输入框高度
+$input-height: 88rpx;
+
+// TabBar 高度
+$tabbar-height: 100rpx;
+
+// 导航栏高度
+$navbar-height: 88rpx;

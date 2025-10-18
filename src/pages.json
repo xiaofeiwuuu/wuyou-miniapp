@@ -1,0 +1,122 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "无忧去水印",
+        "navigationBarBackgroundColor": "#ffe6f0",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/task/index",
+      "style": {
+        "navigationBarTitleText": "任务中心",
+        "navigationBarBackgroundColor": "#ffe6f0",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#ffe6f0"
+      }
+    },
+    {
+      "path": "pages/recommend/index",
+      "style": {
+        "navigationBarTitleText": "推荐",
+        "navigationBarBackgroundColor": "#ffe6f0",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#ffe6f0"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationBarBackgroundColor": "#ffe6f0",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#ffe6f0"
+      }
+    },
+    {
+      "path": "pages/common/image",
+      "style": {
+        "navigationBarTitleText": "查看图片",
+        "navigationBarBackgroundColor": "#ffe6f0",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#000000"
+      }
+    },
+    {
+      "path": "pages/common/video",
+      "style": {
+        "navigationBarTitleText": "查看视频",
+        "navigationBarBackgroundColor": "#ffe6f0",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#000000"
+      }
+    },
+    {
+      "path": "pages/task/keypay",
+      "style": {
+        "navigationBarTitleText": "卡密充值",
+        "navigationBarBackgroundColor": "#ffe6f0",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/recommend/invite",
+      "style": {
+        "navigationBarTitleText": "邀请记录",
+        "navigationBarBackgroundColor": "#ffe6f0",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/common/help",
+      "style": {
+        "navigationBarTitleText": "使用教程",
+        "navigationBarBackgroundColor": "#ffe6f0",
+        "navigationBarTextStyle": "black"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "无忧去水印",
+    "navigationBarBackgroundColor": "#ff69b4",
+    "backgroundColor": "#ffe6f0",
+    "navigationStyle": "default",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ff69b4",
+    "backgroundColor": "#ffe6f0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/sel-home.png",
+        "text": "去水印"
+      },
+      {
+        "pagePath": "pages/task/index",
+        "iconPath": "static/tabbar/task.png",
+        "selectedIconPath": "static/tabbar/sel-task.png",
+        "text": "任务"
+      },
+      {
+        "pagePath": "pages/recommend/index",
+        "iconPath": "static/tabbar/recommend.png",
+        "selectedIconPath": "static/tabbar/sel-recommend.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/tabbar/mine.png",
+        "selectedIconPath": "static/tabbar/sel-mine.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "uniIdRouter": {}
+}

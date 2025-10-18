@@ -1,0 +1,203 @@
+// S Parser 主题系统
+// 粉色系少女风 × 紫色系暗黑酷
+
+// 亮色主题
+:root {
+  // 主色调 - 粉色系
+  --primary-color: #ff69b4;
+  --primary-light: #ffb6c1;
+  --primary-lighter: #ffe6f0;
+  --primary-dark: #ff1493;
+  
+  // 强调色
+  --accent-color: #ffd700;
+  --accent-secondary: #e91e63;
+  
+  // 次要色 - 紫色系（亮色主题下）
+  --secondary-color: #ba55d3;
+  --secondary-light: #9b59b6;
+  --secondary-dark: #8e44ad;
+  
+  // 背景色
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #f8f8f8;
+  --bg-gradient: linear-gradient(135deg, #ffe6f0 0%, #fff 100%);
+  
+  // 文字颜色
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --text-inverse: #ffffff;
+  
+  // 边框和阴影
+  --border-color: #e0e0e0;
+  --border-radius-sm: 10px;
+  --border-radius-md: 15px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 25px;
+  --border-radius-round: 50%;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --shadow-primary: 0 5px 15px rgba(255, 182, 193, 0.3);
+  --shadow-secondary: 0 5px 15px rgba(155, 89, 182, 0.3);
+  
+  // 状态色
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --error-color: #f44336;
+  --info-color: #2196f3;
+  
+  // 动画
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+// 暗色主题
+[data-theme="dark"] {
+  // 主色调 - 紫色系
+  --primary-color: #ba55d3;
+  --primary-light: #9b59b6;
+  --primary-lighter: #8e44ad;
+  --primary-dark: #4b005c;
+  
+  // 强调色
+  --accent-color: #ba55d3;
+  --accent-secondary: #9b59b6;
+  
+  // 次要色 - 在暗色主题下secondary和primary互换
+  --secondary-color: #ff69b4;
+  --secondary-light: #ffb6c1;
+  --secondary-dark: #ff1493;
+  
+  // 背景色
+  --bg-primary: #2b2b2b;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #3a3a3a;
+  --bg-gradient: linear-gradient(135deg, #2b2b2b 0%, #4b005c 100%);
+  
+  // 文字颜色
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-tertiary: #999999;
+  --text-inverse: #2b2b2b;
+  
+  // 边框和阴影
+  --border-color: #666666;
+  --shadow-sm: 0 2px 8px rgba(155, 89, 182, 0.2);
+  --shadow-md: 0 5px 15px rgba(155, 89, 182, 0.25);
+  --shadow-lg: 0 8px 25px rgba(155, 89, 182, 0.3);
+  --shadow-xl: 0 15px 40px rgba(155, 89, 182, 0.35);
+  --shadow-primary: 0 5px 15px rgba(155, 89, 182, 0.4);
+  --shadow-secondary: 0 5px 15px rgba(255, 182, 193, 0.3);
+}
+
+// 全局样式重置 - 移除通用选择器*以兼容微信小程序
+page {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #333333;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// 暗色主题下的page样式
+[data-theme="dark"] page {
+  color: #ffffff;
+  background-color: #1a1a1a;
+}
+
+view, text, input, textarea, button {
+  box-sizing: border-box;
+}
+
+// 渐变背景
+.gradient-bg {
+  background: linear-gradient(135deg, #ffe6f0 0%, #fff 100%);
+  min-height: 100vh;
+}
+
+// 暗色主题下的渐变背景
+[data-theme="dark"] .gradient-bg {
+  background: linear-gradient(135deg, #2b2b2b 0%, #4b005c 100%);
+}
+
+// 主题切换动画
+.theme-transition {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease !important;
+}
+
+// 装饰元素动画
+@keyframes bounce {
+  0%, 80%, 100% { 
+    transform: scale(1); 
+  }
+  40% { 
+    transform: scale(1.1); 
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// 装饰类
+.decoration-bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.decoration-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.decoration-rotate {
+  animation: rotate 20s linear infinite;
+}
+
+// 工具类
+.text-gradient {
+  background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// 暗色主题下的文字渐变
+[data-theme="dark"] .text-gradient {
+  background: linear-gradient(135deg, #ba55d3, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px #ffb6c1;
+}
+
+// 暗色主题下的阴影
+[data-theme="dark"] .shadow-glow {
+  box-shadow: 0 0 20px #9b59b6;
+}

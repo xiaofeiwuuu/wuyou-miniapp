@@ -1,0 +1,102 @@
+/**
+ * SCSS Mixins - iOS 风格
+ */
+@import './variables.scss';
+
+// iOS 风格卡片
+@mixin ios-card($padding: $spacing-md) {
+  background-color: $bg-primary;
+  border-radius: $card-radius;
+  box-shadow: $card-shadow;
+  padding: $padding;
+}
+
+// iOS 风格按钮
+@mixin ios-button($height: $button-height-md) {
+  height: $height;
+  line-height: $height;
+  border-radius: $button-radius;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  transition: all $transition-normal $ease-out;
+}
+
+// 单行文本溢出省略
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行文本溢出省略
+@mixin text-ellipsis-multi($lines: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 清除浮动
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Flex 居中
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flex 两端对齐
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 绝对定位居中
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// iOS 触控反馈
+@mixin touchable {
+  transition: opacity $transition-fast $ease-out;
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+// 安全区域适配
+@mixin safe-area-bottom($padding: 0) {
+  padding-bottom: calc(#{$padding} + constant(safe-area-inset-bottom));
+  padding-bottom: calc(#{$padding} + env(safe-area-inset-bottom));
+}
+
+// 响应式媒体查询
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'phone' {
+    @media (max-width: 750rpx) {
+      @content;
+    }
+  } @else if $breakpoint == 'tablet' {
+    @media (min-width: 751rpx) and (max-width: 1024rpx) {
+      @content;
+    }
+  } @else if $breakpoint == 'desktop' {
+    @media (min-width: 1025rpx) {
+      @content;
+    }
+  }
+}
