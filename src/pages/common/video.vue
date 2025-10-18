@@ -268,7 +268,7 @@ export default {
     proxyDownload(videoUrl) {
       return new Promise((resolve, reject) => {
         const fileName = `video_${Date.now()}.mp4`
-        const serverUrl = 'https://node.xiaofeiwuuu.top'
+        const serverUrl = import.meta.env.VITE_NODE_BASE_URL
         const proxyUrl = `${serverUrl}/system/get_file_stream?url=${encodeURIComponent(videoUrl)}&filename=${encodeURIComponent(fileName)}`
 
         console.log('使用代理下载:', proxyUrl)

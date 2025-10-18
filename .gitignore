@@ -13,6 +13,12 @@ dist
 *.local
 .claude
 .pnpm-store
+
+# 环境变量文件 (不上传真实配置)
+.env.development
+.env.production
+.env.local
+.env.*.local
 # Editor directories and files
 .idea
 *.suo

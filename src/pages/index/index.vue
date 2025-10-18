@@ -246,7 +246,7 @@ export default {
       uni.showLoading({ title: '解析中...' })
 
       try {
-        const serverUrl = 'https://node.xiaofeiwuuu.top'
+        const serverUrl = import.meta.env.VITE_NODE_BASE_URL
         const response = await uni.request({
           url: `${serverUrl}/analyze/wechat`,
           method: 'POST',
